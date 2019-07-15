@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>LIST OF ORDER </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <p *ngFor ="let order of orderArr ">
+   quantity: {{order.Quanty}} <br>
+    sugar: {{order.Sugar}} spoons<br> 
+    milk: {{order.Milk}}<br>
+   price: R {{order.Price}}<br>
+  </p>
+  <ion-button [routerLink]=" ['/home']">BACK</ion-button>
+</ion-content>

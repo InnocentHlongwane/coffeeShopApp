@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>New_Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <P *ngFor=" let cat of categories">
+    <img src="..\assets\images\{{cat.picname}}" >
+
+    {{cat.name}}
+   R{{cat.price}}
+    <ion-button [routerLink]=" ['/place-order/:name']" (click) = "get_Name(cat)"> PLACE ORDER </ion-button>
+  </P>
+
+  <ion-button [routerLink]=" ['/home']"> BACK </ion-button>
+</ion-content>

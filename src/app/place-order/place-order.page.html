@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Place_Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+<h2>{{Name}} </h2>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group (ionChange) ="getSugar($event)">
+
+      <ion-list-header>
+        <ion-label>Sugar</ion-label>
+      </ion-list-header>
+  
+      
+        <ion-label>1 spoon</ion-label>
+        <ion-radio slot="start" value = "1" checked></ion-radio>
+   
+        <ion-label>2 spoons</ion-label>
+        <ion-radio slot="start" value = "2"></ion-radio>
+     
+        <ion-label>3 spoons</ion-label>
+        <ion-radio slot="start" value = "3"></ion-radio>
+     
+    </ion-radio-group>
+  </ion-list><br>
+<ion-radio-group (ionChange) ="getMilk($event)" > 
+  MILK <br>
+  <br> YES
+    <ion-label ></ion-label>
+    <ion-radio slot="start" value="YES" checked></ion-radio>
+  NO
+    <ion-label></ion-label>
+    <ion-radio  slot="start" value="NO" ></ion-radio>
+  </ion-radio-group>
+
+<br>
+<br>
+
+  QUANITYTY 
+   <ion-label position="floating">SELECT</ion-label>
+    <ion-select (ionChange)="getQuantity($event)">
+
+      <ion-select-option value=1>1 CUP</ion-select-option>
+      <ion-select-option value=2>2 CUPS</ion-select-option>
+      <ion-select-option value=3>3 CUPS</ion-select-option>
+      <ion-select-option value=4>4 CUPS</ion-select-option>
+      <ion-select-option value=5>5CUPS</ion-select-option>
+      <ion-select-option value=6>6 CUPS </ion-select-option>
+    </ion-select>
+
+  <br>
+  
+TOTAL PRICE: {{product_price}} 
+<br>
+
+<br> <ion-button [routerLink]=" ['/order']" (click) = "PlaceOrder();">PLACE ORDER</ion-button>
+<ion-button [routerLink]=" ['/new-order']">BACK</ion-button>
+
+</ion-content>
